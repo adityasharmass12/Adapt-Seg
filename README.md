@@ -212,7 +212,7 @@ pip install torch torchvision timm opencv-python numpy tqdm pillow
 
 ---
 
-## 📢 Final Thoughts
+##  Final Thoughts
 
 AdaptSeg demonstrates how modern transformer-based architectures can be applied to solve real-world segmentation problems. By combining efficiency and accuracy, this project highlights the potential of deep learning in understanding complex outdoor environments.
 
