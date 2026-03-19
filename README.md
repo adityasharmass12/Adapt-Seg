@@ -1,69 +1,27 @@
 # AdaptSeg – Offroad Semantic Segmentation
-### Duality AI Offroad Scene Understanding | XƎN-O-THON Project
 
-> *Building intelligent vision systems that understand complex off-road environments.*
-
----
-
-##  Overview
-**AdaptSeg** is a deep learning-based semantic segmentation project designed to understand and classify off-road scenes.  
-The model performs **pixel-level classification** to identify terrain, vegetation, obstacles, and ground clutter.
-
-Developed during **XƎN-O-THON Hackathon** by team **DevErrors**.
+## Overview
+AdaptSeg is a deep learning project focused on semantic segmentation of off-road environments.  
+It uses a transformer-based model (DINOv2) to classify each pixel in an image into meaningful categories such as terrain, vegetation, and obstacles.
 
 ---
 
-##  Objective
-- Perform semantic segmentation on off-road images  
-- Improve model performance using transformer-based architecture  
+## Objective
+- Perform pixel-level classification on off-road images  
+- Improve segmentation performance using transformer-based models  
 - Optimize training for speed, memory, and accuracy  
 
 ---
 
-##  Model & Approach
+## Environment and Dependencies
 
-###  Model Used
-- **DINOv2 ViT-S/14 (Vision Transformer)**  
-  - Efficient and fast transformer-based feature extractor  
-  - Strong visual understanding capability  
+### System Requirements
+- Python 3.8+
+- GPU (recommended: NVIDIA RTX series with CUDA support)
+- Linux or Windows
 
----
-
-###  Key Techniques
-- Transformer-based feature extraction  
-- Custom segmentation classifier  
-- AdamW optimizer for better convergence  
-- Image size optimization to prevent memory overflow  
-- Feature caching for faster training  
-
----
-
-##  Tech Stack
-- Python  
-- PyTorch  
-- Torchvision  
-- CUDA (GPU Acceleration)  
-- OpenCV  
-- Ultralytics  
-- tqdm  
-
----
-
-##  Installation & Setup
+### Required Libraries
+Install dependencies using:
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/AdaptSeg.git
-
-# Navigate to project folder
-cd AdaptSeg
-
-# Create virtual environment
-python -m venv venv
-
-# Activate environment
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-
-# Install dependencies
-pip install -r requirements.txt
+pip install torch torchvision pytorch-cuda opencv-contrib-python tqdm ultralytics ultralytics-thop
