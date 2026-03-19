@@ -37,18 +37,6 @@ The system consists of two main components:
 
 ---
 
-##  Dataset Structure
-
-The dataset is organized as follows:
-
-dataset/
- ├── train/
- │    ├── Color_Images/
- │    ├── Segmentation/
- ├── val/
-      ├── Color_Images/
-      ├── Segmentation/
-
 Each image has a corresponding segmentation mask.
 
 ---
