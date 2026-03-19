@@ -16,7 +16,7 @@ It uses a transformer-based model (DINOv2) to classify each pixel in an image in
 ## Environment and Dependencies
 
 ### System Requirements
-- Python 3.8+
+- Python 3.0+
 - GPU (recommended: NVIDIA RTX series with CUDA support)
 - Linux or Windows
 
