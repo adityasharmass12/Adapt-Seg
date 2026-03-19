@@ -24,4 +24,4 @@ It uses a transformer-based model (DINOv2) to classify each pixel in an image in
 Install dependencies using:
 
 ```bash
-pip install torch torchvision pytorch-cuda opencv-contrib-python tqdm ultralytics ultralytics-thop
+pip install torch torchvision pytorch-cuda contrib-python tqdm ultralytics ultralytics-thop
