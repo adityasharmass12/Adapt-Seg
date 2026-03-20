@@ -189,13 +189,171 @@ pip install torch torchvision timm opencv-python numpy tqdm pillow
 - Extend to real-time applications
 
 ---
+## Steps to Run the Project
+
+Follow the steps below to train, evaluate, and visualize the semantic segmentation model.
+
+---
+
+###  1. Clone the Repository
+
+```bash
+git clone <your-repo-link>
+cd <repo-folder>
+```
+
+---
+
+###  2. Install Dependencies
+
+Make sure you have Python 3.8+ installed.
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
+
+```bash
+pip install torch torchvision timm opencv-python tqdm numpy pillow matplotlib
+```
+
+---
+
+###  3. Setup Dataset
+
+* Download the dataset and place it inside:
+
+```
+/kaggle/input/datasets/roheeeeet/rohit-xeno/
+```
+
+* Ensure folder structure is:
+
+```
+Offroad_Segmentation_Training_Dataset/
+│
+├── train/
+│   ├── Color_Images/
+│   ├── Segmentation/
+│
+├── val/
+│   ├── Color_Images/
+│   ├── Segmentation/
+```
+
+---
+
+###  4. Configure Paths
+
+Update dataset path in the script:
+
+```python
+DATA_DIR = "/kaggle/input/datasets/roheeeeet/rohit-xeno"
+```
+
+---
+
+###  5. Train the Model
+
+Run the training script:
+
+```bash
+python train.py
+```
+
+Or in Kaggle Notebook, run all training cells.
+
+* Model will train for specified epochs
+* Best model will be saved at:
+
+```
+/kaggle/working/best_model.pth
+```
+
+---
+
+###  6. Evaluate the Model
+
+After training, run evaluation:
+
+```bash
+python test.py
+```
+
+* Computes Mean IoU using:
+
+  * Flip TTA
+  * Multi-scale inference
+
+---
+
+###  7. Generate Visualizations
+
+Run the visualization script:
+
+```bash
+python visualize.py
+```
+
+* Outputs saved in:
+
+```
+/kaggle/working/visualizations/
+```
+
+Each output contains:
+
+```
+[ Original | Ground Truth | Prediction | Overlay ]
+```
+
+---
+
+###  8. Download Results (Kaggle)
+
+To download results:
+
+```bash
+cd /kaggle/working
+zip -r results.zip visualizations
+```
+
+Then download `results.zip` from Kaggle output panel.
+
+---
+
+##  Metrics
+
+* Training IoU: ~0.7+
+* Validation/Test IoU: ~0.35–0.6 (depends on generalization)
+
+---
+
+## Notes
+
+* Ensure GPU is enabled for faster training
+* Set `num_workers=0` in DataLoader if facing issues on Kaggle
+* Use same image resolution during training and testing
+
+---
+
+## Future Improvements
+
+* Multi-scale training
+* Better segmentation head (e.g., SegFormer)
+* Class-balanced loss
+* Data augmentation improvements
+
+---
+
 
 ##  Authors
 
 - Tarun Gupta
 - Rohit Kumar
 - Aditya Sharma
-- Sameer Shamsi
+- Md Sameer Shamsi
 - Team DevErrors
 
 ---
