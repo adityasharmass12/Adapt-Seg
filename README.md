@@ -192,10 +192,10 @@ pip install torch torchvision timm opencv-python numpy tqdm pillow
 
 ##  Authors
 
-- Tarun 
-- Rohit
-- Aditya
-- Sameer
+- Tarun Gupta
+- Rohit Kumar
+- Aditya Sharma
+- Sameer Shamsi
 - Team DevErrors
 
 ---
